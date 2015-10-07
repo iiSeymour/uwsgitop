@@ -19,12 +19,15 @@ try:
 except ImportError:
     import json
 
+__version__ = '0.8'
+
 need_reset = True
 screen = None
 
 parser = ArgumentParser(description=__doc__)
 parser.add_argument('socket')
 parser.add_argument('-f', '--frequency', default=1, type=int)
+parser.add_argument('-v', '--version', action='version', version=__version__)
 args = parser.parse_args()
 
 
